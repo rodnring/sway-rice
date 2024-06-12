@@ -8,6 +8,7 @@
 #
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
+set $alt Mod1
 # Home row direction keys, like vim
 set $left h
 set $down j
@@ -19,14 +20,16 @@ set $term kitty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu dmenu_path | dmenu | xargs swaymsg exec --
+# set $menu dmenu_path | dmenu | xargs swaymsg exec --
+
+set $menu rofi -show run | xargs swaymsg exec --
 
 include /etc/sway/config-vars.d/*
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /home/a.shamsipour@Hoshmand.local/Pictures/CrazyComp.jpg fill
+output * bg /home/a.shamsipour@Hoshmand.local/Pictures/Wallpapers/CatCrypt.png fill
 #
 # Example configuration:
 #
@@ -39,9 +42,9 @@ output HDMI-A-1 resolution 1600x900 position 1600,0
 # Example configuration:
 #
 exec swayidle -w \
-          timeout 300 'swaylock -f --image ~/Pictures/SpaceSpiral.jpg' \
+          timeout 300 'swaylock -f --image ~/Pictures/Wallpapers/CyberTown.jpg' \
           timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-          before-sleep 'swaylock -f --image ~/Pictures/SpaceSpiral.jpg'
+          before-sleep 'swaylock -f --image ~/Pictures/Wallpapers/TokyoWall2.jpg'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -69,13 +72,13 @@ exec swayidle -w \
     bindsym $mod+Return exec $term
 
     # Kill focused window
-    bindsym $mod+Shift+q kill
+    bindsym $mod+q kill
 
     # Start your launcher
     bindsym $mod+d exec $menu
 
     # Lock your desktop
-    bindsym $mod+n exec 'swaylock --image ~/Pictures/SpaceSpiral.jpg'
+    bindsym $alt+l exec 'swaylock --image ~/Pictures/Wallpapers/CyberPunk.jpg'
  
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -207,7 +210,24 @@ bindsym $mod+r mode "resize"
   bindsym $mod+Shift+v exec "vivaldi"
   bindsym $mod+Shift+n exec "nautilus"
 
+# Aryan Colors
+  # class                 border  backgr. text    indicator child_border
+client.focused          #7A8478  #d3c6aa #293136 #83c092   #859289
+client.focused_inactive #4d4c43 #333c43 #fef2d5 #83c092   #7a8478
+client.unfocused        #232a2e #1e2326 #9da9a0 #7fbbb3   #3f5865
+client.urgent           #e69875 #e67e80 #232a2e #e67e80  #e67e80
+client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+
+client.background       #5d6b66
+# Aryan Layout
+
+input * {
+  xkb_layout "us, ir"
+  xkb_options "grp:alt_shift_toggle"
+}
 #
+# bindsym $alt+space input 49396:1216:SZH_usb_keyboard xkb_switch_layout next
+
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.
