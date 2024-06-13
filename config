@@ -78,7 +78,7 @@ exec swayidle -w \
     bindsym $mod+d exec $menu
 
     # Lock your desktop
-    bindsym $alt+l exec 'swaylock --image ~/Pictures/Wallpapers/CyberPunk.jpg'
+    bindsym $alt+l exec 'swaylock --image ~/Pictures/Wallpapers/TokiyoWall.jpg'
  
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -212,13 +212,24 @@ bindsym $mod+r mode "resize"
 
 # Aryan Colors
   # class                 border  backgr. text    indicator child_border
-client.focused          #7A8478  #d3c6aa #293136 #83c092   #859289
-client.focused_inactive #4d4c43 #333c43 #fef2d5 #83c092   #7a8478
-client.unfocused        #232a2e #1e2326 #9da9a0 #7fbbb3   #3f5865
-client.urgent           #e69875 #e67e80 #232a2e #e67e80  #e67e80
-client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+# client.focused          #7A8478  #d3c6aa #293136 #722E9A   #859289
+# client.focused_inactive #4d4c43 #333c43 #fef2d5 #83c092   #7a8478
+# client.unfocused        #232a2e #1e2326 #9da9a0 #7fbbb3   #3f5865
+# client.urgent           #e69875 #e67e80 #232a2e #e67e80  #e67e80
+# client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+#
+# client.background       #5d6b66
 
-client.background       #5d6b66
+#Violetta
+
+client.focused          #F5BD1F #3d0066 #FFE150  #FF930A  #805EBF
+client.focused_inactive #5c0099 #2f184b #f7b801  #ea698b  #805EBF
+client.unfocused        #9683ec #220135 #eec7fc  #c05299  #bf99f2
+client.urgent           #e69875 #e67e80 #232a2e  #e67e80  #e67e80
+client.placeholder      #000000 #0c0c0c #ffffff  #000000  #0c0c0c
+
+client.background       #aa7bc3
+
 # Aryan Layout
 
 input * {
